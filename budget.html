@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <fieldset>
+    <legend><header style="font-size: x-large;">My Budget Planner</header></legend>
+    </fieldset>
+</head>
+<body onload="myBudget()">
+    <p><b>Income</b></p>
+    <select id="incomeList" onchange="ChangeActiveIncome(this.value)">
+        <option value="">--Please choose an income object--</option>
+    </select>
+    <p></p>
+    <form>
+        <label for="Name1">Enter Income Source</label>
+        <input type="text" name="Name1" id="Name1" required><br>
+        <p>
+        <label for="Amount1">Enter Amount</label>
+        <input type="text" name="Amount1" id="Amount1" required><br>
+        </p>
+        <p>
+        <label for="Type1">Is this recurring? </label>
+        <select id="Type1">
+            <option value="">--Please select option--</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+        </p>
+        <button onclick="addIncome()" id="button1">Create new user object</button>
+    </form>
+    <hr>
+    <p><b>Expenses</b></p>
+    <select id="expenseList" onchange="ChangeActiveExpense(this.value)">
+        <option value="">--Please select an expense object--</option>
+    </select>
+    <p></p>
+    <form>
+        <label for="Name2">Enter type of Expense</label>
+        <input type="text" name="Name2" id="Name2" required>
+        <p></p>
+        <label for="Amount2">Enter Amount</label>
+        <input type="text" name="Amount2" id="Amount2" required>
+        <p></p>
+        <label for="Type2">Is this recurring? </label>
+        <select id="Type2">
+            <option value="">--Please select option--</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <p></p>
+        <button onclick="addExpense()">Add new expense object</button>
+    </form>
+    <hr>
+    <p><b>Savings</b></p>
+    <select id="savingList" onchange="ChangeActiveSaving(this.value)">
+        <option value="">--Please select an savings object--</option>
+    </select>
+    <p></p>
+    <form>
+        <label for="Saving">Enter Saving Amount</label>
+        <input type="text" name="Saving" id="Name3" required>
+        <p></p>
+        <label for="Amount3">Enter Amount</label>
+        <input type="text" name="Amount3" id="Amount3" required>
+        <p></p>
+        <label for="Type3">Is this recurring? </label>
+        <select id="Type3">
+            <option value="">--Please select option--</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <p></p>
+        <button onclick="addSaving()">Add new savings object</button>
+    </form>
+    <p></p>
+    <fieldset>
+        <legend>My Footer</legend>
+        <footer>
+            <p>Copyright ©Mathew Mbwogge 2025 All rights reserved</p>
+            <p>Cloud Web Development</p>
+        </footer>
+    </fieldset>
+    <script type="text/javascript" src="budget.js"></script>
+</body>
+</html>
